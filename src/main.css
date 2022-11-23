@@ -19,6 +19,12 @@ body {
   .Index {
     @apply w-1/2 mt-12 flex flex-col gap-12;
   }
+  .Tab {
+    @apply p-2 rounded cursor-pointer hover:bg-Tab;
+  }
+  .TabFocused {
+    @apply p-2 text-Green font-extrabold border-b-2 cursor-pointer;
+  }
   .Content {
     @apply w-full p-6 flex flex-col justify-center rounded;
   }

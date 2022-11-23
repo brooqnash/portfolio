@@ -10,6 +10,7 @@ module.exports = {
       Red: "#CD5C5C",
       Green: "#0B9E8A",
       Blue: "#76B7C7",
+      Tab: "#AAAAAA15",
     },
   },
 };
