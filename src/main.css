@@ -14,6 +14,15 @@ body {
 
 @layer components {
   .App {
-    @apply h-screen flex justify-center items-center;
+    @apply w-screen flex justify-center;
+  }
+  .Index {
+    @apply w-1/2 mt-12 flex flex-col gap-12;
+  }
+  .Content {
+    @apply w-full p-6 flex flex-col justify-center rounded;
+  }
+  .ContentHeader {
+    @apply flex justify-center text-3xl font-extrabold;
   }
 }
