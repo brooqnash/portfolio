@@ -9,11 +9,8 @@ import { AppContext } from "../context/AppContext";
 const Index: React.FC = (): JSX.Element => {
   const { activeTab } = useContext(AppContext);
 
-  // TODO: Typing animation. [x]
-  // TODO: Content added. [x]
-  // TODO: Icons hover state. [x]
-  // TODO: Seperate index into components. [x]
   // TODO: Add footer.
+  // TODO: Include GitHub repos in projects.
 
   return (
     <main className="Index">

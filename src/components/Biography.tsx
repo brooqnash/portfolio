@@ -17,15 +17,32 @@ const Biography: React.FC = (): JSX.Element => {
       <div className="flex flex-col gap-6">
         <h1 className="text-3xl font-extrabold">
           <TypeAnimation
-            sequence={["Hello", 3000, "Shwmae", 3000, "Bonjour", 3000]}
+            sequence={[
+              "Hello",
+              3000,
+              "Shwmae",
+              3000,
+              "Bonjour",
+              3000,
+              "Hola",
+              3000,
+              "Nǐn hǎo",
+              3000,
+              "Konnichiwa",
+              3000,
+              "Goddag",
+              3000,
+              "Shalom",
+              3000,
+            ]}
             repeat={Infinity}
           />
         </h1>
         <p className="w-5/6 text-sm">
           As a self-taught developer, I'm constantly learning and perfecting my
-          skill as a developer. I enjoy challenges and goals that force me to
-          increase my knowledge and skills. I like to create things with web
-          technologies that can help give users access to various services.
+          skill. I enjoy challenges and goals that force me to increase my
+          knowledge. I like to create things with web technologies that can help
+          give users access to various services.
         </p>
         <p className="text-sm text-Grey">🔞 20 years old</p>
         <p className="text-sm text-Grey">🏳️ Wales, United Kingdom</p>
