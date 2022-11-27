@@ -30,6 +30,7 @@ const Projects: React.FC = (): JSX.Element => {
           />
         );
       })}
+      {repoData.length === 0 && <h1 className="text-center">Loading...</h1>}
     </section>
   );
 };

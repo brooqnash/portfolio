@@ -9,7 +9,7 @@ const Tabs: React.FC = (): JSX.Element => {
   };
 
   return (
-    <ul className="flex justify-evenly">
+    <ul className="Tabs">
       <li
         onClick={() => changeTab("profile")}
         className={activeTab === "profile" ? "TabFocused" : "Tab"}
