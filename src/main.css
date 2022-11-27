@@ -53,4 +53,8 @@ body {
   .TimelineContent {
     @apply w-full pl-12 flex flex-col justify-center;
   }
+
+  .Repository {
+    @apply p-4 flex flex-col gap-8 border-2 border-DarkGrey rounded hover:border-Grey;
+  }
 }

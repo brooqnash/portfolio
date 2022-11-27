@@ -10,7 +10,8 @@ const Index: React.FC = (): JSX.Element => {
   const { activeTab } = useContext(AppContext);
 
   // TODO: Add footer.
-  // TODO: Include GitHub repos in projects.
+  // TODO: Cache GitHub repos.
+  // TODO: Repo fallback.
 
   return (
     <main className="Index">
