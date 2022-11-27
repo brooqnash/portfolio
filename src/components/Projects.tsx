@@ -8,7 +8,6 @@ const Projects: React.FC = (): JSX.Element => {
     fetch("https://api.github.com/users/brooqnash/repos")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setRepoData(data.reverse());
       });
   }, []);
