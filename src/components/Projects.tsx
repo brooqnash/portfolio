@@ -1,14 +1,30 @@
 import { useState, useEffect } from "react";
 import Repository from "./Repository";
 
+type repoData = {
+  name: string;
+  description: string;
+  language: string;
+  html_url: string;
+};
+
 const Projects: React.FC = (): JSX.Element => {
-  const [repoData, setRepoData] = useState<Array<any>>([]);
+  const [repoData, setRepoData] = useState<Array<repoData>>([]);
 
   useEffect(() => {
     fetch("https://api.github.com/users/brooqnash/repos")
       .then((response) => response.json())
       .then((data) => {
-        setRepoData(data.reverse());
+        let repos = [] as Array<repoData>;
+        data.reverse().map((repo: any) =>
+          repos.push({
+            name: repo.name,
+            description: repo.description,
+            language: repo.language,
+            html_url: repo.html_url,
+          })
+        );
+        setRepoData(repos);
       });
   }, []);
 

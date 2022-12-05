@@ -6,6 +6,10 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  transition: 0.05s all;
+}
+
 body {
   background-color: #000000;
   color: #ffffff;
