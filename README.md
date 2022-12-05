@@ -3,6 +3,18 @@
   <p align="center"><i>A web-based portfolio to display what I'm currently working on.</i></p>
 </div>
 
+## **Usage**
+
+If you wish to see this website live, please head over to the [live site](https://brooknash.netlify.app/).
+
+Or if you wish to clone this and use it yourself.
+
+``` bash
+cd portfolio
+npm install
+npm run dev
+```
+
 ## **Tools**
 
 This is a simple SPA so a lightweight stack is most certainly needed, see below.
