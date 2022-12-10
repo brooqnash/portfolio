@@ -16,14 +16,20 @@ const Projects: React.FC = (): JSX.Element => {
       .then((response) => response.json())
       .then((data) => {
         let repos = [] as Array<repoData>;
-        data.reverse().map((repo: any) =>
-          repos.push({
-            name: repo.name,
-            description: repo.description,
-            language: repo.language,
-            html_url: repo.html_url,
-          })
+        const sortedByDate = data.sort(
+          (a: any, b: any) =>
+            new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
         );
+
+        sortedByDate.map((repo: any) => {
+          if (repo.name !== "brooqnash")
+            repos.push({
+              name: repo.name,
+              description: repo.description,
+              language: repo.language,
+              html_url: repo.html_url,
+            });
+        });
         setRepoData(repos);
       });
   }, []);
