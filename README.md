@@ -9,7 +9,7 @@ If you wish to see this website live, please head over to the [live site](https:
 
 Or if you wish to clone this and use it yourself.
 
-``` bash
+```bash
 cd portfolio
 npm install
 npm run dev
@@ -17,15 +17,11 @@ npm run dev
 
 ## **Tools**
 
-This is a simple SPA so a lightweight stack is most certainly needed, see below.
-
-- [![React][react]][react-url]
-- [![TypeScript][typescript]][react-url]
-- [![Tailwindcss][tailwind]][react-url]
+[![React][react]][react-url] <br>
+[![TypeScript][typescript]][typescript-url] <br>
+[![Tailwindcss][tailwind]][tailwind-url] <br>
 
 ## **Acknowledgments**
-
-These are some of the tools that I use within this project, from environment-bootstrap to added elements.
 
 - [Vite](https://vitejs.dev/)
   - My preferred environment to bootstrap any SPA.

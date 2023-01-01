@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Repository from "./Repository";
+import Message from "./Message";
 
 type repoData = {
   name: string;
@@ -10,10 +11,14 @@ type repoData = {
 
 const Projects: React.FC = (): JSX.Element => {
   const [repoData, setRepoData] = useState<Array<repoData>>([]);
+  const [error, setError] = useState<boolean>();
 
   useEffect(() => {
     fetch("https://api.github.com/users/brooqnash/repos")
-      .then((response) => response.json())
+      .then((response) => {
+        if (response.ok) return response.json();
+        setError(true);
+      })
       .then((data) => {
         let repos = [] as Array<repoData>;
         const sortedByDate = data.sort(
@@ -53,6 +58,7 @@ const Projects: React.FC = (): JSX.Element => {
         );
       })}
       {repoData.length === 0 && <h1 className="text-center">Loading...</h1>}
+      {error && <Message type="error" content="Failed to fetch projects" />}
     </section>
   );
 };
