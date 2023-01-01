@@ -12,5 +12,18 @@ module.exports = {
       Green: "#0B9E8A",
       Blue: "#76B7C7",
     },
+    extend: {
+      keyframes: {
+        message: {
+          "0%": { opacity: "0%" },
+          "25%": { opacity: "100%" },
+          "75%": { opacity: "100%" },
+          "100%": { opacity: "0%" },
+        },
+      },
+      animation: {
+        message: "message 5s ease-in-out",
+      },
+    },
   },
 };

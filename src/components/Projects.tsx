@@ -11,22 +11,26 @@ type repoData = {
 
 const Projects: React.FC = (): JSX.Element => {
   const [repoData, setRepoData] = useState<Array<repoData>>([]);
-  const [error, setError] = useState<boolean>();
+  const [error, setError] = useState<boolean>(false);
+  const [info, setInfo] = useState<boolean>(false);
 
   useEffect(() => {
     fetch("https://api.github.com/users/brooqnash/repos")
       .then((response) => {
-        if (response.ok) return response.json();
+        if (response.ok) {
+          setInfo(true);
+          return response.json();
+        }
         setError(true);
       })
       .then((data) => {
-        let repos = [] as Array<repoData>;
-        const sortedByDate = data.sort(
+        data.sort(
           (a: any, b: any) =>
             new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
         );
 
-        sortedByDate.map((repo: any) => {
+        let repos = [] as Array<repoData>;
+        data.map((repo: any) => {
           if (repo.name !== "brooqnash")
             repos.push({
               name: repo.name,
@@ -58,7 +62,8 @@ const Projects: React.FC = (): JSX.Element => {
         );
       })}
       {repoData.length === 0 && <h1 className="text-center">Loading...</h1>}
-      {error && <Message type="error" content="Failed to fetch projects" />}
+      {error && <Message type="error" content="Failed to retrieve" />}
+      {info && <Message type="info" content="Successfully retrieved" />}
     </section>
   );
 };

@@ -34,6 +34,10 @@ body {
     @apply flex justify-center;
   }
 
+  .Message {
+    @apply fixed top-12 left-12 w-max p-4 flex items-center gap-4 bg-DarkGrey rounded opacity-0 z-10;
+  }
+
   .Index {
     @apply md:w-1/2 w-screen mt-12 flex flex-col gap-12;
   }

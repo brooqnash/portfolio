@@ -12,14 +12,11 @@ const Message: React.FC<Props> = (MessageInfo: Props): JSX.Element => {
   useEffect(() => {
     setTimeout(() => {
       setDisplay(false);
-    }, 3000);
+    }, 5000);
   }, []);
 
   return (
-    <div
-      style={{ display: display ? "flex" : "none" }}
-      className="fixed top-12 left-12 w-72 p-4 flex items-center gap-4 bg-DarkGrey rounded z-10"
-    >
+    <div className={`Message ${display && "animate-message"}`}>
       {MessageInfo.type === "error" && (
         <BiErrorCircle color="#CD5C5C" size={24} />
       )}
